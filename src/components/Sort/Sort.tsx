@@ -30,7 +30,7 @@ const Sort = () => {
     const handleClickOutside = (event: MouseEvent) => {
       const _event = event as PopupClick;
       // @ts-ignore
-      if (sortRef.current && !event.includes(sortRef.current)) {
+      if (sortRef.current && !event.composedPath().includes(sortRef.current)) {
         setSortOpen(false);
       }
     };
